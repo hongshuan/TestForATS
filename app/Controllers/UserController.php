@@ -80,10 +80,6 @@ class UserController extends Controller
             $this->redirect('/login');
         }
 
-        # fetch user from database
-        #$userModel = new UserModel($this->getDatabase());
-        #$user = $userModel->findById($userid);
-
         # fetch user from session
         $user = $this->getSession()->get('user');
 
