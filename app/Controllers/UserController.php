@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function loginAction()
     {
-        $data = array('error' => '');
+        $data = $this->getFormFields('login');
 
         $request = $this->getRequest();
 
@@ -38,10 +38,11 @@ class UserController extends Controller
     {
         $request = $this->getRequest();
 
-        $data = $request->all();
-        $data['error'] = '';
+        $data = $this->getFormFields('register');
 
-        if ($this->getRequest()->isMethod('POST')) {
+        if ($request->isMethod('POST')) {
+            $data = $request->all();
+
             $userModel = new UserModel($this->getDatabase());
             $user = $userModel->findByName($request->getPost('username'));
 
@@ -88,5 +89,15 @@ class UserController extends Controller
 
         // welcome the logged in user with user infomation and a logout link
         return $this->render('welcome', $user);
+    }
+
+    protected function getFormFields($formName)
+    {
+        $formFields = array(
+            'login'    => array('error', 'username'),
+            'register' => array('error', 'username', 'email', 'telephone'),
+        );
+
+        return array_fill_keys($formFields[$formName], '');
     }
 }
