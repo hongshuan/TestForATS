@@ -1,0 +1,2 @@
+var/sessions/sess_*
+var/logs/*.log

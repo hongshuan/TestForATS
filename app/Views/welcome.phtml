@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<title>Welcome</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+<script type='text/javascript' src="/js/register.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+
+<script type='text/javascript'>
+</script>
+</head>
+<body>
+
+<div class="container col-md-6 col-md-offset-3">
+  <h2>Welcome</h2>
+  <div class="panel panel-default">
+    <div class="panel-heading">Welcome</div>
+    <div class="panel-body">
+        <div class="body bg-gray">
+            <div class="form-group row">
+               <div class="col-sm-4"><strong>User ID:</strong></div>
+               <div class="col-sm-8"><span><?= $this->e($id) ?></span></div>
+            </div>
+            <div class="form-group row">
+               <div class="col-sm-4"><strong>Username:</strong></div>
+               <div class="col-sm-8"><span><?= $this->e($username) ?></span></div>
+            </div>
+            <div class="form-group row">
+               <div class="col-sm-4"><strong>Email:</strong></div>
+               <div class="col-sm-8"><span><?= $this->e($email) ?></span></div>
+            </div>
+            <div class="form-group row">
+               <div class="col-sm-4"><strong>Telephone:</strong></div>
+               <div class="col-sm-8"><span><?= $this->e($telephone) ?></span></div>
+            </div>
+        </div>
+        <div class="footer">
+          <a href="/logout" class="btn btn-primary col-md-offset-5">Logout</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
