@@ -48,12 +48,8 @@ class Application
 
         $parameters = $this->router->getParameters();
 
-        #echo "Controller: $class<br>";
-        #echo "Method: $method<br>";
-
         $controller = new $class($this);
         $response = call_user_func_array(array($controller, $method), $parameters);
-       #$response = $controller->$method();
 
         return $response;
     }

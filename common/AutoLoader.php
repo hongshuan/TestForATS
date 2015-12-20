@@ -32,8 +32,6 @@ class AutoLoader
         $filename = $this->basedir . '/../' . implode('/', $parts) . '.php';
 
         if (file_exists($filename)) {
-            //echo "for $class<br>";
-            //echo "try to load $filename<br>";
             require $filename;
         }
     }
