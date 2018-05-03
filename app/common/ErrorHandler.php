@@ -9,7 +9,7 @@ class ErrorHandler
         set_error_handler(array($this, 'handler'));
     }
 
-    function handler($errno, $errstr, $errfile, $errline)
+    public function handler($errno, $errstr, $errfile, $errline)
     {
         if (!(error_reporting() & $errno)) {
             return;
@@ -27,7 +27,7 @@ class ErrorHandler
             $errmsg = "Unknown error type: [$errno] $errstr $errfile:$errline\n";
         }
 
-        error_log($errmsg, 3, __DIR__ . '/../var/logs/error.log');
+        error_log($errmsg, 3, BASE_DIR . '/var/logs/error.log');
 
         /* Don't execute PHP internal error handler */
         return true;

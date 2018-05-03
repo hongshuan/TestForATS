@@ -6,7 +6,7 @@ class Session
 {
     public function start()
     {
-        session_save_path(__DIR__ . '/../var/sessions/');
+        session_save_path(BASE_DIR . '/var/sessions/');
         session_start();
     }
 

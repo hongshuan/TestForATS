@@ -1,15 +1,17 @@
 <?php
 
-require __DIR__ . '/../Common/AutoLoader.php';
+define('BASE_DIR', dirname(__DIR__));
 
-use Common\Config;
-use Common\AutoLoader;
-use Common\Application;
+require BASE_DIR . '/app/Common/AutoLoader.php';
 
-$loader = new AutoLoader(__DIR__);
+use App\Common\Config;
+use App\Common\AutoLoader;
+use App\Common\Application;
+
+$loader = new AutoLoader(BASE_DIR);
 $loader->register();
 
-$config = new Config(__DIR__ . '/../app/Config/config.ini');
+$config = new Config(BASE_DIR . '/app/Config/config.ini');
 
 $app = new Application($config);
 $app->run();

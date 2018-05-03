@@ -11,7 +11,7 @@ class Router
 
     public function __construct()
     {
-        $this->routes = require __DIR__ . '/../app/Config/routes.php';
+        $this->routes = require BASE_DIR . '/app/Config/routes.php';
     }
 
     public function match()
