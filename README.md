@@ -56,11 +56,11 @@ In frontend, I used jQuery and Bootstrap.
 ```
 TestForATS
 ├── app
+│   ├── Common
 │   ├── Config
 │   ├── Controllers
 │   ├── Models
 │   └── Views
-├── common
 ├── var
 │   ├── logs
 │   └── sessions
@@ -92,7 +92,7 @@ app/Views/
     - register.phtml
     - welcome.phtml
 
-common/                     kernel classes of the framework
+app/common/                 kernel classes of the framework
     - Application.php
     - AutoLoader.php
     - Config.php
