@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-use Common\Application;
-use Common\Template;
+use App\Common\Application;
+use App\Common\Template;
 
 class Controller
 {

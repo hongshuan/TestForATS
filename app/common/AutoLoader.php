@@ -1,6 +1,6 @@
 <?php
 
-namespace Common;
+namespace App\Common;
 
 /**
  * This is just a project-specific ClassAutoLoader,

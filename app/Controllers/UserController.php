@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\Controller;
 use App\Models\UserModel;
-use Common\Password;
+use App\Common\Password;
 
 class UserController extends Controller
 {

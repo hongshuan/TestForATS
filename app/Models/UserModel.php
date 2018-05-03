@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Models\Model;
-use Common\Password;
+use App\Common\Password;
 
 class UserModel extends Model
 {
